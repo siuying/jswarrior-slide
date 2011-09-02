@@ -1,0 +1,21 @@
+#coffee .slides.template-default > article:not(.nobackground):not(.biglogo) {
+  background: -webkit-linear-gradient(top, #FFF, #EAEAEA);
+  background: -moz-linear-gradient(top, #FFF, #EAEAEA);
+  background: -ms-linear-gradient(top, #FFF, #EAEAEA);
+  background: -o-linear-gradient(top, #FFF, #EAEAEA);
+}
+
+#coffee h1 {
+  font-size: 3em;
+  line-height: 1em;
+}
+
+#coffee h2, #coffee h3 {
+  font-size: 2em;
+  line-height: 1em;
+}
+
+#coffee pre span {
+  font-size: 2em;
+  line-height: 1em;
+}

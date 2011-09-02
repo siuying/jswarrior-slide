@@ -1,75 +1,511 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset='utf-8'>
+  <head>
+    <title>Learning CoffeeScript with Coffee Warrior</title>
 
-  <title>siuying/jswarrior-slide @ GitHub</title>
-
-  <style type="text/css">
-    body {
-      margin-top: 1.0em;
-      background-color: #22caa5;
-      font-family: Helvetica, Arial, FreeSans, san-serif;
-      color: #000000;
-    }
-    #container {
-      margin: 0 auto;
-      width: 700px;
-    }
-    h1 { font-size: 3.8em; color: #dd355a; margin-bottom: 3px; }
-    h1 .small { font-size: 0.4em; }
-    h1 a { text-decoration: none }
-    h2 { font-size: 1.5em; color: #dd355a; }
-    h3 { text-align: center; color: #dd355a; }
-    a { color: #dd355a; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .download { float: right; }
-    pre { background: #000; color: #fff; padding: 15px;}
-    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-    .footer { text-align:center; padding-top:30px; font-style: italic; }
-  </style>
-</head>
-
-<body>
-  <a href="http://github.com/siuying/jswarrior-slide"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
-
-  <div id="container">
-
-    <div class="download">
-      <a href="http://github.com/siuying/jswarrior-slide/zipball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/zip.png"></a>
-      <a href="http://github.com/siuying/jswarrior-slide/tarball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/tar.png"></a>
-    </div>
-
-    <h1><a href="http://github.com/siuying/jswarrior-slide">jswarrior-slide</a>
-      <span class="small">by <a href="http://github.com/siuying">siuying</a></span></h1>
-
-    <div class="description">
-      
-    </div>
-
-    <h2>Contact</h2>
-<p>siuying (siu.ying@gmail.com)<br/>      </p>
-
-
-    <h2>Download</h2>
-    <p>
-      You can download this project in either
-      <a href="http://github.com/siuying/jswarrior-slide/zipball/master">zip</a> or
-      <a href="http://github.com/siuying/jswarrior-slide/tarball/master">tar</a> formats.
-    </p>
-    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
-      by running:
-      <pre>$ git clone git://github.com/siuying/jswarrior-slide</pre>
-    </p>
-
-    <div class="footer">
-      get the source code on GitHub : <a href="http://github.com/siuying/jswarrior-slide">siuying/jswarrior-slide</a>
-    </div>
-
-  </div>
-
+    <meta charset='utf-8'>
+    <script src='http://html5slides.googlecode.com/svn/trunk/slides.js'></script>
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js'></script>
+    <script src='js/Markdown.Converter.js'></script>
+  	<link href='style.css' rel='stylesheet' type='text/css'>
+    <script>
+		$(function(){
+			var converter = new Markdown.Converter();
+			$("section article.md").each(function(idx, content){
+				var $content = $(content);
+				$content.html(converter.makeHtml($content.html()));
+			});
+		});
+	</script>
+  </head>
   
-</body>
+  <style>
+  </style>
+
+  <body style='display: none' id="coffee">
+
+    <section class='slides layout-regular template-default'>
+
+<article class='md'>
+# Learning CoffeeScript with Coffee Warrior
+
+Francis Chong  
+</article>
+
+<article class='md'>
+### Francis Chong (siuying)
+
+* Developer at [Ignition Soft](http://ignition.hk)
+* Mobile
+* Ruby
+* Web
+</article>
+
+<article class='md'>
+
+</article>
+
+<article class='md'>
+# CoffeeScript
+</article>
+
+<article class='md'>
+# What is it?
+</article>
+
+<article class=''>
+<q>a little language that compiles into JavaScript</q>
+</article>
+
+<article class='md'>
+### CoffeeScript
+<pre>
+func = -> "bar"
+</pre>
+</article>
+
+<article class='md'>
+### JavaScript
+<pre>
+var func;
+func = function() {
+  return "bar";
+};
+</pre>
+</article>
+
+<article class='md'>
+# Inspired by Ruby and Python
+</article>
+
+<article class='md'>
+### CoffeeScript
+<pre>
+alert "It's cold!" if heat < 5
+</pre>
+<pre>
+func = ->
+  for name in ["Foo", "Bar", "Woo"]
+    alert "Release #{name}"
+</pre>
+</article>
+
+<article class='md'>
+
+# Further Reading
+* [CoffeeScript](http://jashkenas.github.com/coffee-script/)
+* [The Little Book on CoffeeScript](http://jswarrior.ignition.hk/)
+* [CoffeeScript: Accelerated JavaScript Development](http://pragprog.com/book/tbcoffee/coffeescript)
+
+</article>
+
+<article class='md'>
+# Coffee Warrior
+</article>
+
+<article class='md'>
+# CoffeeScript version of ruby-warrior
+[ruby-warrior](https://github.com/ryanb/ruby-warrior)
+</article>
+
+<article class='md'>
+# a Game written in CoffeeScript ...
+</article>
+
+<article class='md'>
+# ... for learning CS and AI
+</article>
+
+<article class='md'>
+# Why?
+</article>
+
+<article class='md'>
+# Play in Browser
+</article>
+
+<article class='md'>
+# Interactive
+</article>
+
+<article class='md'>
+# No Installation
+</article>
+
+<article class='md'>
+# How?
+</article>
+
+<article class='md'>
+# The Dungeon
+</article>
+
+<article class='md'>
+<pre>
+Beginner Level 1
+
+ --------
+|@      >|
+ -------- 
+
+@ - Warrior (HP: 20)
+> - Stair
+</pre>
+</article>
+
+<article class='md'>
+# The API
+</article>
+
+<article class='md'>
+# warrior.walk()  
+Move in the given direction, by default move 'forward'
+</article>
+
+<article class='md'>
+# Player (AI)
+</article>
+
+<article class='md'>
+<pre>
+class Player
+  playTurn: (warrior) ->
+    if warrior.feel().isEnemy()
+      warrior.attack()
+    else
+      warrior.walk()
+</pre>
+</article>
+
+<article class='fill current'>
+<h3><a href="http://jswarrior.ignition.hk" target="_blank">Demo</a></h3>
+<img src="images/2.png" width="90%" />
+</article>
+
+<article class='md'>
+# Making of Coffee Warrior
+</article>
+
+<article class='md'>
+# 1. Load Level
+</article>
+
+<article class='md'>
+# DSL
+[Domain Specific Language](http://martinfowler.com/bliki/DomainSpecificLanguage.html)
+</article>
+
+<article class='md'>
+### /tower/level_004.coffee
+<pre style="font-size: 0.5em; overflow: visible">
+exports.level = ->
+
+  @description "You can hear bow strings ..."
+  @time_bonus 45
+  @ace_score 90
+  @size 7, 1
+  @stairs 6, 0
+
+  @warrior 0, 0, 'east', ->
+    @add_abilities 'walk', 'feel', 'attack', 
+                   'health', 'rest'
+
+  @unit 'thick_sludge', 2, 0, 'west'
+  @unit 'archer', 3, 0, 'west'</pre>
+</article>
+
+<article class='md'>
+# ___DSL___ => [LevelLoader] => ___Level___
+</article>
+
+<article class='md'>
+# 2. Render Level
+</article>
+
+<article class='md'>
+# EventEmitter
+</article>
+
+<article class='md'>
+### /game.coffee (Model)
+<pre style="font-size: 0.5em; overflow: visible">
+if @level.isFailed()
+  @stop()
+  @emitter.emit "game.failed", @level
+</pre>
+</article>
+
+<article class='md'>
+### /views/view.coffee (View)
+<pre style="font-size: 0.5em; overflow: visible">
+@emitter.on "game.failed", (level) =>
+  @puts "You failed! Improve your warrior
+  and try again!"
+  @levelChanged(level)
+</pre>
+</article>
+
+<article class='md'>
+# Decouple Models and Views
+</article>
+
+<article class='md'>
+# 3. User written AI
+</article>
+
+<article class='md'>
+# Really simple
+</article>
+
+<article class='md'>
+### /level.coffee
+<pre>
+loadPlayer: (jsString=null) ->
+  try
+    Player = eval(jsString) if jsString
+    @player = new Player()
+    @warrior.player = @player
+
+  catch e
+    @emitter?.emit "game.error", e
+</pre>
+</article>
+
+<article class='md'>
+# Player = eval(jsString)
+</article>
+
+<article class='md'>
+### /units/warrior.coffee
+<pre style="font-size: 0.6em; overflow: visible">
+class Warrior extends BaseUnit
+  playTurn: (turn) ->
+    @player?.playTurn turn
+</pre>
+</article>
+
+<article class='md'>
+# What is the ___turn___?
+</article>
+
+<article class='md'>
+# Implement actions of a ___Unit___
+</article>
+
+<article class='md'>
+### /units/turn.coffee
+<pre style="font-size: 0.5em; overflow: visible">
+for name, nameParams of abilities
+  camelAbilityName = Utils.toCamelCase(name)
+  ability = eval "new Abilities.#{camelAbilityName}()"
+
+  if ability.isAction()
+    # actions can only be called once per turn
+    @addAction(name)
+  else
+    # sense can be called unlimited times
+    @addSense(name, params)
+</pre>
+</article>
+
+<article class='md'>
+### /units/turn.coffee
+<pre style="font-size: 0.5em; overflow: visible">
+addAction: (action) ->
+  eval "this.#{action} = function() { 
+  var __slice = Array.prototype.slice; 
+  var param = 1 <= arguments.length ? __slice.call(arguments, 0) : []; 
+  if (this.action) {
+    throw 'You can only run one action per 
+    turn!'; 
+  } 
+  return this.action = ['#{action}', param];
+};"
+</pre>
+</article>
+
+<article class='md'>
+# Tips on Building JS/CS apps
+</article>
+
+<article class='md'>
+### Many Source Files
+<img src="images/1.png">
+</article>
+
+<article class='md'>
+### Use &lt;scirpt&gt; to include them?
+&lt;script src=&#x27;base_abilities.js&#x27;&gt;&lt;/script&gt;  
+&lt;script src=&#x27;action.js&#x27;&gt;&lt;/script&gt;  
+&lt;script src=&#x27;sense.js&#x27;&gt;&lt;/script&gt;  
+&lt;script src=&#x27;attack.js&#x27;&gt;&lt;/script&gt;  
+&lt;script src=&#x27;feel.js&#x27;&gt;&lt;/script&gt;  
+&lt;script src=&#x27;look.js&#x27;&gt;&lt;/script&gt;  
+...
+</article>
+
+<article class='md'>
+# No
+</article>
+
+<article class='md'>
+# node.js: require('file'); 
+## Independent Modules
+</article>
+
+<article class='md'>
+# Common.js
+[commonjs.org](http://www.commonjs.org/)
+</article>
+
+<article class='md'>
+# Stitch
+[github.com/sstephenson/stitch](https://github.com/sstephenson/stitch)
+## Develop and test your JS apps as modules in Node.js
+</article>
+
+<article class='md'>
+### /build.js
+<pre style="font-size: 0.5em; overflow: visible">
+stitch  = require 'stitch'
+fs      = require 'fs'
+coffee  = require 'coffee-script'
+
+package = stitch.createPackage
+  paths: [
+    __dirname + '/lib', 
+    __dirname + '/vendor'
+  ]
+
+package.compile: (err, source) ->
+  fs.writeFile 'package.js', source, (e) ->
+    throw e if e
+    console.log 'Compiled package.js'
+</pre>
+</article>
+
+<article class='md'>
+# Don't like script?
+</article>
+
+<article class='md'>
+### Cake
+<q>a (very) simple build system similar to Make and Rake.</q>
+</article>
+
+<article class='md'>
+### /Cakefile
+<pre style="font-size: 0.5em; overflow: visible">
+task 'compile', 'rebuild output javascript', (options) ->
+  package = stitch.createPackage
+    paths: [
+      __dirname + '/lib', 
+      __dirname + '/vendor'
+    ]
+
+  package.compile: (err, source) ->
+    fs.writeFile 'package.js', source, (e) ->
+      throw e if e
+      console.log 'Compiled package.js'
+</pre>
+<pre>&gt; cake compile</pre>
+</article>
+
+<article class='md'>
+# node web framework
+</article>
+
+<article class='md'>
+# express
+[expressjs.com](http://expressjs.com/)
+</article>
+
+<article class='md'>
+## Simple routing, handy helpers
+<pre style="font-size: 0.5em; overflow: visible">
+app.get '/', (req, res) ->
+  res.render 'index.ejs', 
+    levelNumber: 1, epic: false
+
+app.get /^\/([0-9]+)$/, (req, res) ->
+  res.render 'index.ejs', 
+    levelNumber: req.params[0], epic: false
+</pre>
+</article>
+
+<article class='md'>
+# Deployment
+</article>
+
+<article class='md'>
+# Heroku
+[heroku.com](http://heroku.com)
+</article>
+
+<article class='md'>
+# PAAS
+Platform as a Service
+</article>
+
+<article class='md'>
+# Ruby, node.js, Java
+... etc
+</article>
+
+<article class='md'>
+# Cloud deployment 
+in 30 seconds
+</article>
+
+<article class='md'>
+# Create the app on Heroku
+<pre>heroku create --stack cedar</pre>
+</article>
+
+<article class='md fill'>
+## Prepare /package.json
+<pre style="font-size: 0.5em; overflow: visible">{
+  "name": "js-warrior",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "2.2.0",
+    "ejs": "0.4.3",
+    "coffee-script": "1.1.2",
+    "underscore": "1.1.7"
+  }
+}</pre>
+</article>
+
+<article class='md'>
+# Prepare /Procfile
+<pre>web: coffee web.coffee</pre>
+</article>
+
+<article class='md'>
+# Commit n push
+<pre>
+git add .
+git commit -m 'deployment files for heroku'
+git push heroku master
+</pre>
+</article>
+<article class='fill current'>
+<h3>It's Live!</h3>
+<img src="images/2.png" width="90%" />
+</article>
+
+<article class='md'>
+# Contact me
+
+[twitter.com/siuying](http://twitter.com/siuying)  
+[github.com/siuying](http://github.com/siuying)  
+</article>
+
+<article class='md'>
+# Thank You
+</article>
+
+    </section>
+
+  </body>
 </html>
