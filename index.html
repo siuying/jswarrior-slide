@@ -350,7 +350,7 @@ addAction: (action) ->
 </article>
 
 <article class='md'>
-# Tips on Building JS/CS apps
+# Notes on Building JS/CS apps
 </article>
 
 <article class='md'>
@@ -447,71 +447,6 @@ task 'compile', 'rebuild output javascript', (options) ->
       console.log 'Compiled package.js'
 </pre>
 <pre>&gt; cake compile</pre>
-</article>
-
-<article class='md'>
-# node web framework
-</article>
-
-<article class='md'>
-# express
-[expressjs.com](http://expressjs.com/)
-</article>
-
-<article class='md'>
-## Simple routing, handy helpers
-<pre style="font-size: 0.5em; overflow: visible">
-app.get '/', (req, res) ->
-  res.render 'index.ejs', 
-    levelNumber: 1, epic: false
-
-app.get /^\/([0-9]+)$/, (req, res) ->
-  res.render 'index.ejs', 
-    levelNumber: req.params[0], epic: false
-</pre>
-</article>
-
-<article class='md'>
-# Deployment
-</article>
-
-<article class='md'>
-# Heroku
-[heroku.com](http://heroku.com)
-</article>
-
-<article class='md'>
-# PaaS
-Platform as a Service
-</article>
-
-<article class='md'>
-# Ruby, node.js, Java
-... etc
-</article>
-
-<article class='md'>
-# Cloud deployment 
-in 30 seconds
-</article>
-
-<article class='md'>
-### Create the app on Heroku
-<pre>heroku create --stack cedar</pre>
-</article>
-
-<article class='md'>
-### Commit & Push
-<pre>
-git add .
-git commit -m 'deployment files for heroku'
-git push heroku master
-</pre>
-</article>
-
-<article class='fill current'>
-<h3>It's Live!</h3>
-<img src="images/2.png" width="90%" />
 </article>
 
 <article class='md'>
