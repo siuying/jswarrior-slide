@@ -33,12 +33,23 @@ Francis Chong
 </article>
 
 <article class='md'>
-### Francis Chong (siuying)
-
+# Who am I
+* Francis Chong (@siuying)
 * Developer at [Ignition Soft](http://ignition.hk)
-* Mobile
-* Ruby
-* Web
+</article>
+
+<article class='md'>
+# Francis Chong (@siuying)
+</article>
+
+<article class='huge md'>
+Mobile
+
+Ruby
+
+Web
+
+</p>
 </article>
 
 <article class='md'>
@@ -99,16 +110,15 @@ func = ->
 # Coffee Warrior
 </article>
 
-<article class='md'>
-# CoffeeScript version of ruby-warrior
-[ruby-warrior](https://github.com/ryanb/ruby-warrior)
+<article class='md bigger'>
+[ruby-warrior](https://github.com/ryanb/ruby-warrior) in CoffeeScript
 </article>
 
-<article class='md'>
-# a Game written in CoffeeScript ...
+<article class='md bigger'>
+a Game written in CoffeeScript ...
 </article>
 
-<article class='md'>
+<article class='md bigger'>
 # ... for learning CS and AI
 </article>
 
@@ -196,7 +206,7 @@ class Player
 </article>
 
 <article class='md'>
-### /tower/level_004.coffee
+### level_004.coffee
 <pre style="font-size: 0.5em; overflow: visible">
 exports.level = ->
 
@@ -214,9 +224,25 @@ exports.level = ->
   @unit 'archer', 3, 0, 'west'</pre>
 </article>
 
-<article class='md'>
-# ___DSL___ => [LevelLoader] => ___Level___
+
+<article class='md bigger'>
+___DSL___, 
+
+[LevelLoader],
+
+___Level___
+
 </article>
+
+<article class='md'>
+### level.coffee
+<pre style="font-size: 0.5em; overflow: visible">
+  loadLevel: ->
+    loader    = new LevelLoader(this)    
+    level     = require(@loadPath()).level
+    level.apply(loader)</pre>
+</article>
+
 
 <article class='md'>
 # 2. Render Level
@@ -227,7 +253,7 @@ exports.level = ->
 </article>
 
 <article class='md'>
-### /game.coffee (Model)
+### game.coffee (Model)
 <pre style="font-size: 0.5em; overflow: visible">
 if @level.isFailed()
   @stop()
@@ -236,7 +262,7 @@ if @level.isFailed()
 </article>
 
 <article class='md'>
-### /views/view.coffee (View)
+### view.coffee (View)
 <pre style="font-size: 0.5em; overflow: visible">
 @emitter.on "game.failed", (level) =>
   @puts "You failed! Improve your warrior
@@ -245,8 +271,8 @@ if @level.isFailed()
 </pre>
 </article>
 
-<article class='md'>
-# Decouple Models and Views
+<article class='md bigger'>
+Decouple Models and Views!
 </article>
 
 <article class='md'>
@@ -258,7 +284,7 @@ if @level.isFailed()
 </article>
 
 <article class='md'>
-### /level.coffee
+### level.coffee
 <pre>
 loadPlayer: (jsString=null) ->
   try
@@ -276,7 +302,7 @@ loadPlayer: (jsString=null) ->
 </article>
 
 <article class='md'>
-### /units/warrior.coffee
+### warrior.coffee
 <pre style="font-size: 0.6em; overflow: visible">
 class Warrior extends BaseUnit
   playTurn: (turn) ->
@@ -293,7 +319,7 @@ class Warrior extends BaseUnit
 </article>
 
 <article class='md'>
-### /units/turn.coffee
+### turn.coffee
 <pre style="font-size: 0.5em; overflow: visible">
 for name, nameParams of abilities
   camelAbilityName = Utils.toCamelCase(name)
@@ -309,7 +335,7 @@ for name, nameParams of abilities
 </article>
 
 <article class='md'>
-### /units/turn.coffee
+### turn.coffee
 <pre style="font-size: 0.5em; overflow: visible">
 addAction: (action) ->
   eval "this.#{action} = function() { 
@@ -348,9 +374,11 @@ addAction: (action) ->
 # No
 </article>
 
-<article class='md'>
-# node.js: require('file'); 
-## Independent Modules
+<article class=''>
+<p class='bigger'>node.js: require('file');</p>
+
+<p class='big'>Independent Modules</p>
+
 </article>
 
 <article class='md'>
@@ -358,14 +386,16 @@ addAction: (action) ->
 [commonjs.org](http://www.commonjs.org/)
 </article>
 
-<article class='md'>
+<article class='md big'>
 # Stitch
 [github.com/sstephenson/stitch](https://github.com/sstephenson/stitch)
-## Develop and test your JS apps as modules in Node.js
+
+Develop and test your JS apps as modules in Node.js
+
 </article>
 
 <article class='md'>
-### /build.js
+### build.js
 <pre style="font-size: 0.5em; overflow: visible">
 stitch  = require 'stitch'
 fs      = require 'fs'
@@ -385,6 +415,15 @@ package.compile: (err, source) ->
 </article>
 
 <article class='md'>
+### Run it!
+<pre>
+  
+> node build.js
+  
+</pre>
+</article>
+
+<article class='md'>
 # Don't like script?
 </article>
 
@@ -394,7 +433,7 @@ package.compile: (err, source) ->
 </article>
 
 <article class='md'>
-### /Cakefile
+### Cakefile
 <pre style="font-size: 0.5em; overflow: visible">
 task 'compile', 'rebuild output javascript', (options) ->
   package = stitch.createPackage
@@ -443,7 +482,7 @@ app.get /^\/([0-9]+)$/, (req, res) ->
 </article>
 
 <article class='md'>
-# PAAS
+# PaaS
 Platform as a Service
 </article>
 
@@ -458,12 +497,12 @@ in 30 seconds
 </article>
 
 <article class='md'>
-# Create the app on Heroku
+### Create the app on Heroku
 <pre>heroku create --stack cedar</pre>
 </article>
 
 <article class='md'>
-# Commit n push
+### Commit & Push
 <pre>
 git add .
 git commit -m 'deployment files for heroku'
