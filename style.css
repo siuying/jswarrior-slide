@@ -5,35 +5,20 @@
   background: -o-linear-gradient(top, #FFF, #EAEAEA);
 }
 
-#coffee h1 {
-  font-size: 4em;
-  line-height: 1em;
-}
-
-#coffee h2, #coffee h3 {
-  font-size: 3em;
-  line-height: 1em;
-}
-
-#coffee pre span {
-  font-size: 2em;
-  line-height: 1em;
-}
-
-#coffee .slides .big {
-  font-size: 3em;
-  line-height: 1em;
-}
-
-#coffee .slides .bigger{
+#coffee .slides .huge  {
   font-weight: bolder;
-  font-size: 4em;
+  font-size: 140px;
   line-height: 1em;
 }
 
-#coffee .slides .huge {
+#coffee .slides h1, #coffee .slides .bigger {
   font-weight: bolder;
-  font-size: 5em;
+  font-size: 100px;
+  line-height: 1em;  
+}
+
+#coffee .slides h2, #coffee .slides .big, #coffee .slides h3 {
+  font-size: 70px;
   line-height: 1em;
 }
 
